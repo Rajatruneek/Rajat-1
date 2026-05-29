@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM WhatsApp Integration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>CRM WhatsApp Integration</h1>
+      <p>Customer data entry, save, share by WhatsApp, export to Excel/Word.</p>
+    </header>
+
+    <section class="form-card">
+      <h2>Customer Details</h2>
+      <form id="customerForm">
+        <div class="field-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+911234567890" required />
+        </div>
+        <div class="field-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="field-row">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" />
+        </div>
+        <div class="field-row">
+          <label for="message">Notes</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="button-row">
+          <button type="submit">Save Entry</button>
+          <button type="button" id="sendWhatsApp">Send via WhatsApp</button>
+          <button type="button" id="exportCsv">Export to Excel</button>
+          <button type="button" id="exportWord">Export to Word</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-card">
+      <h2>Saved Customer Entries</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="entriesTable">
+          </tbody>
+        </table>
+      </div>
+      <div class="footer-actions">
+        <button id="clearEntries">Clear All Entries</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
